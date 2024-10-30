@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThugStore</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            overflow-y: auto;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin: 50px 0;
+            font-size: 3em;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .assortment {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        .category {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 18%; /* Изменяем на 45% в медиазапросе ниже */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .category:hover {
+            transform: scale(1.05);
+        }
+
+        .contacts,
+        .reviews,
+        .about {
+            margin-top: 50px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.8em;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://example.com/stars.png') repeat;
+            z-index: -1;
+        }
+
+        .review-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .review-links li {
+            margin: 10px 0;
+        }
+
+        .review-links a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        .review-links a:hover {
+            text-decoration: underline;
+        }
+
+        .contacts a {
+            color: #00ff00;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Уменьшаем размер шрифта заголовка */
+            }
+
+            .category {
+                width: 45%; /* Увеличиваем ширину категорий для мобильных устройств */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em; /* Ещё меньше для малых экранов */
+            }
+
+            .category {
+                width: 90%; /* Сделаем категории шире для узких экранов */
+                margin: 10px 0; /* Уменьшаем отступы */
+            }
+
+            .contacts a {
+                font-size: 1em; /* Уменьшаем шрифт для контактов */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stars"></div>
+
+    <h1>OG THUG</h1>
+
+<div class="assortment">
+        <div class="category">
+            <h2>ЮMoney</h2>
+            <p>Полная идентификация</p>
+            <p>Высшее качество</p>
+            <p>Виртуальная карта</p>
+            <p>Физ. сим</p>
+            <p>Цена: 700₽</p>
+        </div>
+        <div class="category">
+            <h2>Яндекс Банк</h2>
+            <p>Продвинутая верификация</p>
+            <p>Виртуальная карта</p>
+            <p>Переводы без комиссий</p>
+            <p>СБП</p>
+            <p>Цена: 1800₽</p>
+        </div>
+        <div class="category">
+            <h2>Ozon Bank</h2>
+            <p>Расширенные лимиты</p>
+            <p>Виртуальная карта</p>
+            <p>Переводы без комиссий</p>
+            <p>СБП</p>
+            <p>Цена: 2000₽</p>
+        </div>
+        <div class="category">
+            <h2>Авито</h2>
+            <p>Подтвержденные</p>
+            <p>Вериф по гос. услугам</p>
+            <p>Прохожу повторную проверку данных</p>
+            <p>Цена: 2000₽</p>
+        </div>
+        <div class="category">
+            <h2>ЦУПИС</h2>
+            <p>Полная верификация</p>
+            <p>Вериф по гос. услугам</p>
+            <p>Идеально подойдет под БК</p>
+            <p>Цена: 2300₽</p>
+        </div>
+        <div class="category">
+            <h2>Гос. Услуги</h2>
+            <p>Подтвержденные аккаунт</p>
+            <p>Аккаунты 18+</p>
+            <p>Только со сменой номера</p>
+            <p>Подойдут под многие цели (уточнять у продавца)</p>
+            <p>Цена: 3200₽</p>
+        </div>
+    </div>
+
+<div class="contacts">
+    <h2><strong>Контакты</strong></h2>
+    <a href="https://t.me/OGTHUG" target="_blank"><strong>Мой телеграм</strong></a>
+</div>
+
+<div class="reviews">
+    <h2><strong>Отзывы</strong></h2>
+    <ul class="review-links">
+        <li><a href="https://rutor.co.at/members/og-thug.559318/"><strong>RuTor (+VPN)</strong></a></li>
+        <li><a href="https://lolz.live/threads/7757730/"><strong>LolzTeam</strong></a></li>
+        <li><a href="https://t.me/+qTioSWiZwbAyNmUy"><strong>Канал с отзывами</strong></a></li>
+    </ul>
+</div>
+
+<div class="about">
+    <h2><strong>О нас</strong></h2>
+    <p>
+        <strong>Мы предлагаем широкий ассортимент товаров с высоким качеством обслуживания.</strong><br>
+        <strong>У нас только физические сим и мы без проблем, бесплатно можем перевязать номер телефона на ваш!</strong><br>
+        <strong>Мы стремимся быть лучшими в своей области и всегда рады помочь вам с любыми вопросами!</strong><br>
+        <strong>Оплату принимаю в криптовалюте, переводом на карту, криптобот чек.</strong>
+    </p>
+</div>
+
+<footer>
+    <p>&copy; <strong>OGTHUG</strong> -> <strong>Всегда на связи.</strong></p>
+</footer>
+</html>
